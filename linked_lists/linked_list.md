@@ -7,11 +7,14 @@ The first node in the list is called the __Head__ and the last node in the list 
 Compared to arrays, insertion and deletion in this data structure has a better time complexity. Arrays require the shifting of indices when an element is inserted or deleted causing these functions to be O(n).  -->
 
 ## Big O
-* prepend (add to front of list) = O(1)
-* append (add to back of list) = O(1)
-* lookup = O(n)
-* insert = O(n)
-* delete = O(n)
+* prepend (add to front of list) = __O(1)__
+  * linked lists have a reference to their head node which can be easily reassigned
+* append (add to back of list) = __O(1)__
+  * linked lists also have a reference to their tail node which can be easily reassigned
+* lookup = __O(n)__
+  * lookup is O(n) because 
+* insert = __O(n)__
+* delete = __O(n)__
 
 ## Singly vs Doubly
 A node consists of two There are two types of linked lists, singly and doubly.\

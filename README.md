@@ -3,7 +3,7 @@
 ## Introduction
 Data structures and algorithms (__DS&A__) are pivotal when it comes to technical interviews, especially at Big N companies and Unicorns. However, these concepts are often very difficult to grasp due to the vast amount of information needed to fully understand each data structure.\
 \
-This repo will serve as a hub for all information regarding data structures and algorithms. Whether you have a big interview coming up or you want to rejog your memory on these concepts, having all the information stored in an organized repo will help immensely with this process.\
+This repo will serve as a hub for all information regarding data structures and algorithms. Whether you have a big interview coming up or you want to rejog your memory on these concepts, having all the information stored in an organized repo will help immensely with this process. I will also be adding sample interview questions from Big N Companies and popular LeetCode questions.\
 \
 All topics covered will be written in JavaScript.
 
