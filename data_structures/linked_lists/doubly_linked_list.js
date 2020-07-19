@@ -1,17 +1,23 @@
 // DOUBLY-LINKED LIST CLASS
 // Same as singly-linked lists but each node will have a prev pointer
 class DoublyLinkedList { 
-  constructor(value) {  // instantiating a linked list
-    this.head = {       // set a head property with the inital value passed into argument
+  // instantiating a linked list
+  constructor(value) {
+    // set a head property with the inital value passed into argument
+    this.head = {
       value: value,
       next: null,       // next would be null since this is the only node at the creation
       prev: null        // prev would be null as well
     };
-    this.tail = this.head;  // the tail would also be the head since it is the only node
-    this.length = 1; // OPTIONAL
+
+    // the tail would also be the head since it is the only node
+    this.tail = this.head;
+    // OPTIONAL
+    this.length = 1;
   }
 
-  printList() {     // method to help visualize linked list order using array
+  // method to help visualize linked list order using array
+  printList() {
     const arr = [];
     let currentNode = this.head;
 
@@ -23,40 +29,59 @@ class DoublyLinkedList {
     return arr;
   }
 
-  append(value) {       // O(1)
-    const newNode = {   // instantiate a new node
+  // O(1)
+  append(value) {       
+    // instantiate a new node
+    const newNode = {
       value: value,     // value equal to value passed in as argument
       next: null,       // next would be null since this is being appended
       prev: null        // keep prev as null for now (mirroring if node class was used)
     };
 
-    newNode.prev = this.tail    // set the new node's prev to the original tail
-    this.tail.next = newNode;   // we FIRST set the current tail's next value to the new node created
-    this.tail = newNode;        // THEN we set the tail to be the new node (order of operations)
-    this.length++;              // increment the optional length
+    // set the new node's prev to the original tail
+    newNode.prev = this.tail;
+    // we FIRST set the current tail's next value to the new node created
+    this.tail.next = newNode;
+    // THEN we set the tail to be the new node (order of operations)
+    this.tail = newNode;
+    // increment the optional length
+    this.length++;
   }
 
-  prepend(value) {      // O(1)
-    const newNode = {   // instantiate a new node
+  // O(1)
+  prepend(value) {
+    // instantiate a new node
+    const newNode = {
       value: value,     // value equal to value passed in as argument
       next: null,       // keep next as null for now (mirroring if node class was used)
       prev: null        // prev will be null ince this is being prepended
     };
 
-    this.head.prev = newNode    // set the current head's previous pointer to the new node
-    newNode.next = this.head;   // we FIRST set the new node's next pointing to the current head
-    this.head = newNode;        // THEN we set the head to be the new node
-    this.length++;              // increment the optional length
+    // set the current head's previous pointer to the new node
+    this.head.prev = newNode;
+    // we FIRST set the new node's next pointing to the current head
+    newNode.next = this.head;
+    // THEN we set the head to be the new node
+    this.head = newNode;
+    // increment the optional length
+    this.length++;
   }
 
-  insert(index, value) {  // O(n) - takes 2 arguments, index (where to insert node) and value
-    if (index >= this.length) {   // if the index is greater than or equal to the length of the list
-      return this.append(value);  // use the append method that is already defined, making it O(1)
-    } else if (index === 0) {     // if the index is 0
-      return this.prepend(value); // use the prepend method that is already defined, making it O(1)
+  // O(n)
+  // takes 2 arguments, index (where to insert node) and value
+  insert(index, value) {
+    // if the index is greater than or equal to the length of the list
+    if (index >= this.length) {
+      // use the append method that is already defined, making it O(1)
+      return this.append(value);
+    // if the index is 0
+    } else if (index === 0) {
+      // use the prepend method that is already defined, making it O(1)
+      return this.prepend(value);
     }
 
-    const newNode = {           // instantiate new node, same as before
+    // instantiate new node, same as before
+    const newNode = {
       value: value,
       next: null,
       prev: null
@@ -71,16 +96,23 @@ class DoublyLinkedList {
       counter++;
     }
 
-    let followingNode = currentNode.next  // set the current node's original following node to a variable
+    // set the current node's original following node to a variable
+    let followingNode = currentNode.next;  
 
-    newNode.prev = currentNode;       // the new node's prev to the current node
-    newNode.next = followingNode;     // the new node's next will point to the current node's next
-    followingNode.prev = newNode;     // the following node's prev will be the new node
-    currentNode.next = newNode;       // the current node's next will point to our new node
-    this.length++;                    // increment optional length
+    // the new node's prev to the current node
+    newNode.prev = currentNode;
+    // the new node's next will point to the current node's next
+    newNode.next = followingNode;
+    // the following node's prev will be the new node
+    followingNode.prev = newNode;
+    // the current node's next will point to our new node
+    currentNode.next = newNode;
+    // increment optional length
+    this.length++;
   }
 
-  remove(index) {   // O(n)
+  // O(n)
+  remove(index) {
     // list traversal to find element previous to remove index
     let counter = 0;
     let currentNode = this.head;
@@ -90,12 +122,17 @@ class DoublyLinkedList {
       counter++;
     }
 
-    let removedNode = currentNode.next;     // save the node to be removed to a variable
-    let followingNode = removedNode.next;   // set the removed node's next node to a variable
+    // save the node to be removed to a variable
+    let removedNode = currentNode.next;
+    // set the removed node's next node to a variable
+    let followingNode = removedNode.next;
 
-    currentNode.next = followingNode;       // set the current node's next pointer to the unwanted node's next pointer
-    followingNode.prev = currentNode;       // set the following node's previous pointer to the current node
-    this.length--;  // decrement optional length
+    // set the current node's next pointer to the unwanted node's next pointer
+    currentNode.next = followingNode;
+    // set the following node's previous pointer to the current node
+    followingNode.prev = currentNode;
+    // decrement optional length
+    this.length--;
   }
 };
 
