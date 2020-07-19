@@ -5,7 +5,7 @@ Data structures and algorithms (__DS&A__) are pivotal when it comes to technical
 \
 This repo will serve as a hub for all information regarding data structures and algorithms. Whether you have a big interview coming up or you want to rejog your memory on these concepts, having all the information stored in an organized repo will help immensely with this process. I will also be adding sample interview questions from Big N Companies and popular LeetCode questions.\
 \
-All topics covered will be written in JavaScript.
+All topics covered will be written in ___JavaScript___.
 
 ## Big O Notation
 As programmers, we need to determine if certain algorithms are too costly on time or space as applications scale larger. We use Big O Notation to measure the __time__ and __space__ complexity of an algorithm to determine if it is efficient. Big O ALWAYS measures the worst case scenario for an algorithm in order to best prepare for inefficiency. Each line of code must be measured, then we drop all constants and select the most dominant term to determine the Big O Notation.\
@@ -51,6 +51,6 @@ Here is a [link](https://www.bigocheatsheet.com/) to a cheat sheet that provides
   * Quick Sort
 * Searching
   * DFS/BFS
-  * Dijkstra
+  * Dijkstra's
 * Dynamic Programming
   * Memoization
