@@ -42,7 +42,7 @@ Singly linked lists comprise of nodes that hold 2 pieces of information, __the v
 
 
 ### Doubly-Linked Lists
-Doubly linked lists comprise of nodes that hold an additional piece of information, __a pointer to the previous node__. Doubly-linked lists can be traversed from _BOTH_ directions. Because of this, the head of a doubly-linked list will have it's previous pointer pointing to null just like the tail has it's next 
+Doubly linked lists comprise of nodes that hold an additional piece of information, __a pointer to the previous node__. Doubly-linked lists can be traversed from _BOTH_ directions. Because of this, the head of a doubly-linked list will have it's previous pointer pointing to null just like the tail has it's next pointer pointing to null.
 
 #### Pros
 * Can be traversed from both directions
@@ -52,5 +52,4 @@ Doubly linked lists comprise of nodes that hold an additional piece of informati
 * More complex to implement correctly
 * Requires more memory because of extra property
 
-pointer pointing to null.
 ![](./images/doubly.png)
