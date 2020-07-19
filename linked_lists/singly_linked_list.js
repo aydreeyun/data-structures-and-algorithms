@@ -28,8 +28,8 @@ class Node {            // a separate class for nodes is often used to keep code
   }
 };
 
-// LINKED LIST CLASS
-class LinkedList { 
+// SINGLY-LINKED LIST CLASS
+class SinglyLinkedList { 
   constructor(value) {  // instantiating a linked list
     this.head = {       // set a head property with the inital value passed into argument
       value: value,
@@ -99,7 +99,7 @@ class LinkedList {
     this.length++;                    // increment optional length
   }
 
-  remove(index) {
+  remove(index) {   // O(n)
     // list traversal to find element previous to remove index
     let counter = 0;
     let currentNode = this.head;
@@ -114,10 +114,32 @@ class LinkedList {
     currentNode.next = removedNode.next;  // set the current node's next pointer to the unwanted node's next pointer
     this.length--;  // decrement optional length
   }
+
+  // POPULAR INTERVIEW QUESTION
+  // Reverse a linked list
+  reverse() {
+    if (!this.head.next) {    // if the head is the only element, return it (no need for reversal)
+      return this.head;
+    }
+
+    let firstNode = this.head;          // reference to first node in list
+    let secondNode = firstNode.next;    // reference to second node
+
+    // traverse the list until second node is null
+    while (secondNode) {
+      const temp = secondNode.next;     // reference to second node's next pointer
+      secondNode.next = firstNode;      // the second node's next pointer will now point to the first node (reversing the order)
+      firstNode = secondNode;           // set the first node to the second node now to continuously traverse
+      secondNode = temp;                // second node now reference's the original second node's next pointer
+    }
+
+    this.head.next = null;              // set the original head's next to null completing reversal
+    this.head = firstNode;              // set the head to the last node now that the list has been traversed
+  }
 };
 
 // TEST CASES
-const myLinkedList = new LinkedList(10);  // [10 --> null]
+const myLinkedList = new SinglyLinkedList(10);  // [10 --> null]
 console.log(myLinkedList.printList());
 myLinkedList.append(5);   // [10 --> 5 --> null]
 console.log(myLinkedList.printList());
@@ -129,4 +151,9 @@ myLinkedList.insert(2, 99);  // [1 --> 10 --> 99 --> 5 --> 16 --> null]
 console.log(myLinkedList.printList());
 myLinkedList.remove(2);   // [1 --> 10 --> 5 --> 16 --> null]
 console.log(myLinkedList.printList());
+myLinkedList.reverse();   // [16 --> 5 --> 10 --> 1 --> null]
+console.log(myLinkedList.printList());
 console.log(myLinkedList);
+
+
+
