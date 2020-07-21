@@ -3,7 +3,7 @@ Stacks are a type of data structure which employs the Last In First Out (LIFO) p
 
 ### Last In First Out (LIFO)
 #### Last In
-![](./images/push.gif)\
+![](./images/push.gif)
 #### First Out
 ![](./images/pop.gif)
 
@@ -20,7 +20,7 @@ Queues, are like stacks but the main difference is that it employs the First In 
 
 ### First In First Out (FIFO)
 #### First In
-![](./images/enqueue.gif)\
+![](./images/enqueue.gif)
 ####  First Out
 ![](./images/dequeue.gif)
 
