@@ -9,14 +9,14 @@ Stacks are a type of data structure which employs the Last In First Out (LIFO) p
 
 ## Big O
 
-BOTH arrays and linked lists
+__BOTH__ arrays and linked lists
 * lookup = __O(n)__
 * pop = __O(1)__
 * push = __O(1)__
 * peek = __O(1)__
 
 # Queues
-Queues, are like stacks but the main difference is that it employs the First In First Out (FIFO) principle. Queues can also be created using arrays and linked lists, however arrays are less efficient when it comes to 
+Queues, are like stacks but the main difference is that it employs the First In First Out (FIFO) principle. Queues can also be created using arrays and linked lists, however arrays are less efficient when it comes to adding and removing elements from the queue.
 
 ### First In First Out (FIFO)
 #### First In
@@ -39,3 +39,4 @@ Arrays (Less efficient)
 * dequeue/shift = __O(n)__
 * peek = __O(1)__
 
+Arrays are less efficient for queues because adding and removing the first element to an array is an O(n) operation due to the shifting of indices.
