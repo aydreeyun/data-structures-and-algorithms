@@ -2,9 +2,9 @@
 Stacks are a type of data structure which employs the Last In First Out (LIFO) principle. The last item to be added to the stack will be the first item removed. Stacks can be created using either arrays or linked lists.
 
 ### Last In First Out
-Last In\
+#### Last In
 ![](./images/push.gif)\
-First Out\
+#### First Out
 ![](./images/pop.gif)
 
 ## Big O
@@ -19,9 +19,9 @@ BOTH arrays and linked lists
 Queues, are like stacks but the main difference is that it employs the First In First Out (FIFO) principle. Queues can also be created using arrays and linked lists, however arrays are less efficient when it comes to 
 
 ### First In First Out
-First In\
+#### First In
 ![](./images/enqueue.gif)\
-First Out\
+####  First Out
 ![](./images/dequeue.gif)
 
 
