@@ -18,8 +18,8 @@ Example 2:
 Input: [4,1,2,1,2]
 Output: 4
 ```
-Note:\
-\
+__Note__:
+
 Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 
 
