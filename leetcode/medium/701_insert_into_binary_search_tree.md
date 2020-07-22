@@ -55,7 +55,9 @@ function TreeNode(val) {
 }
 ```
 ## Whiteboard
-
+It looks like the simplest implementation of an insert is valid for this problem so that makes it much easier. If the problem was asking to reshape the tree based on the input, it would have definitely been more challenging. Knowing how binary search trees work, we can insert the new node by checking the value of the current node as we traverse through the tree. If the current node's value is greater than the incoming node, we know to look left, otherwise look right. We will keep traversing through the tree until a null node is found, then we know to insert the incoming node at that spot.\
+\
+With this information, we can solve this either iteratively or recursively.
 
 ## Solutions
 
@@ -63,13 +65,12 @@ function TreeNode(val) {
 * Time Complexity: O(log n)
 * Space Complexity: O(1)
 
+Using recursion, the solution is very clean but coming up with the solution will take some time to draw out what is happening. Our base case is when the root being passed in as an argument is null, we return the incoming node. Now that we have our base case, our recursive case is implemented by comparing the current node's (root) value with the argument value and traversing either left or right. 
 ```javascript
 const insertIntoBST = function(root, val) {
-  if (root === null) {
-    return new TreeNode(val);
-  }
+  if (!root) return new TreeNode(val);
   
-  if(val < root.val) {
+  if (val < root.val) {
     root.left = insertIntoBST(root.left, val);
   } else {
     root.right = insertIntoBST(root.right, val);
@@ -83,6 +84,7 @@ const insertIntoBST = function(root, val) {
 * Time Complexity: O(log n)
 * Space Complexity: O(1)
 
+The solution using iteration is similar to recursion, our condition for the while statement will be checking to see if the current node is not null and performing a check on the current node's value with the argument value. It then checks to see if the next traversal exists, if it doesn't then we insert the node in that spot, otherwise we set the current node to it's next level. When a node is inserted, the while loop is broken and we return the root node.
 ```javascript
 const insertIntoBST = function(root, val) {
   if (!root) return new TreeNode(val);
