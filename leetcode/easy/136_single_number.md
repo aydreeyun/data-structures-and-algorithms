@@ -27,6 +27,8 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
 
 
 ## Solutions
+* Time Complexity: O(n)
+* Space Complexity: O(n)
 
 ```javascript
 const singleNumber = function(nums) {

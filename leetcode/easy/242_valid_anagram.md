@@ -28,6 +28,8 @@ __Follow up__: What if the inputs contain unicode characters? How would you adap
 
 
 ## Solutions
+* Time Complexity: O(n)
+* Space Complexity: O(n)
 
 ```javascript
 const isAnagram = function(s, t) {

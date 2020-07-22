@@ -25,6 +25,8 @@ Explanation: [-1] has the largest sum = -1.
 
 
 ## Solutions
+* Time Complexity: O(n)
+* Space Complexity: O(1)
 
 ```javascript
 const maxSubArray = function(nums) {

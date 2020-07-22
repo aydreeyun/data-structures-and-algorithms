@@ -62,6 +62,8 @@ Constraints:
 
 
 ## Solutions
+* Time Complexity: O(n)
+* Space Complexity: O(1)
 
 ```javascript
 const getTargetCopy = function(original, cloned, target) {

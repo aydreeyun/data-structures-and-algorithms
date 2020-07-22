@@ -84,6 +84,8 @@ Constraints:
 
 
 ## Solutions
+* updateSubrectangle: O(n^2)
+* getValue: O(1)
 
 ```javascript
 const SubrectangleQueries = function(rectangle) {

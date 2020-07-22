@@ -42,7 +42,8 @@ Constraints:
 
 
 ## Solutions
-
+* Time Complexity: O(n^2)
+* Space Complexity: O(1)
 ```javascript
 const rotate = function(nums, k) {
   while (k > 0) {

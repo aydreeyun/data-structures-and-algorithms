@@ -29,6 +29,8 @@ __Note__:
 
 
 ## Solutions
+* Time Complexity: O(n^2)
+* Space Complexity: O(1)
 
 ```javascript
 var moveZeroes = function(nums) {

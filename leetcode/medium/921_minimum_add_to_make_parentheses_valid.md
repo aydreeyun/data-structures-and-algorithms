@@ -51,6 +51,8 @@ __Note__:
 
 
 ## Solutions
+* Time Complexity: O(n)
+* Space Complexity: O(n)
 
 ```javascript
 const minAddToMakeValid = function(S) {

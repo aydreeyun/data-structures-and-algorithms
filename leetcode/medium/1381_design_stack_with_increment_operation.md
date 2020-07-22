@@ -51,6 +51,9 @@ Constraints:
 
 
 ## Solutions
+* Push: O(1)
+* Pop: O(1)
+* Increment: O(n)
 
 ```javascript
 const CustomStack = function(maxSize) {

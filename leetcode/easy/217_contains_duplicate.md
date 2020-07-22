@@ -33,6 +33,8 @@ Output: true
 
 
 ## Solutions
+* Time Complexity: O(n)
+* Space Complexity: O(n)
 
 ```javascript
 const containsDuplicate = function(nums) {

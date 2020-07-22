@@ -33,6 +33,8 @@ __Note__: You may assume the string contains only lowercase English letters.
 
 
 ## Solutions
+* Time Complexity: O(n)
+* Space Complexity: O(n)
 
 ```javascript
 const firstUniqChar = function(s) {
