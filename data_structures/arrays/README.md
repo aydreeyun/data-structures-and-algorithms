@@ -29,7 +29,7 @@ Strings behave similarly to arrays, they are simply an array of characters. Any 
 This is a very common question involving strings. You are given a string and must reverse the order of the characters.\
 \
 Solution: Iterate through the string backwards and push each character in that order.
-```
+```javascript
 const reverse = str => {
   const reverse = [];
 
@@ -41,7 +41,7 @@ const reverse = str => {
 }
 ```
 The solution below is the same as above, using JavaScript's built in `.reverse()` function for arrays.
-```
+```javascript
 const reverse = str => {
   return str.split('').reverse().join('');
 }

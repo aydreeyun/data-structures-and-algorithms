@@ -26,7 +26,7 @@ Find the indices of 2 elements in the array whose sum is equal to the target.\
 \
 __Solution 1: Nested Loop__\
 Using nested loops, we can solve this problem by checking every element in the array with every other element to see if the sum is equal to the target. However, this solution is inefficient as it is O(n^2) due to the nested loop.
-```
+```javascript
 const twoSum = (arr, target) => {
   for (let i = 0; i < arr.length - 1; i++) {
     for (let j = 0; j < arr.length; j++) {
@@ -37,7 +37,7 @@ const twoSum = (arr, target) => {
 ```
 __Solution 2: Using a Hash__\
 Using a hash, we will only need to iterate through the array once, making this solution more efficient at O(n) time complexity.
-```
+```javascript
 const twoSum = (arr, target) => {
   const hash = {};
 
