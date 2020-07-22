@@ -101,7 +101,7 @@ const insertIntoBST = function(root, val) {
       currentNode = currentNode.right;
     } else {
       if (!currentNode.left) {
-        currentNode.left = new TreeNode(val, null, null);
+        currentNode.left = new TreeNode(val);
         break;
       }
       
