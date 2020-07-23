@@ -6,16 +6,17 @@ Take a look at this [link](https://www.bigocheatsheet.com/) for more information
 Here is another [link](https://www.toptal.com/developers/sorting-algorithms) that visualizes each sorting algorithm.
 
 ## Sorting Algorithm in JavaScript
-Each language will have it's own sort method, but some languages' sorting algorithms differ from others. For instance, JavaScript's sorting algorithm does not sort in the conventional way. When we are sorting integers in JavaScript, JavaScript converts each number into a string and sorts it based on the character codes from "a" to "z". JavaScript's sort method requires a callback in order for it to sort integers
+Each language will have it's own sort method, but some languages' sorting algorithms differ from others. For instance, JavaScript's sorting algorithm does not sort in the conventional way. When we are sorting integers in JavaScript, JavaScript converts each number into a string and sorts it based on the character codes from "a" to "z". JavaScript's sort method requires a callback in order for it to sort integers properly.
 
+__Without callback__:
 ```javascript
-// WITHOUT CALLBACK
 const arr = [3, 1, 12, 9, 6, 72, 101];
 
 console.log(arr.sort());  // [1, 101, 12, 3, 6, 72, 9]
+```
 
-
-// WITH CALLBACK
+__With callback__:
+```javascript
 const arr = [3, 1, 12, 9, 6, 72, 101];
 
 console.log(arr.sort((a, b) => (a - b)));  // [1, 3, 6, 9, 12, 72, 101]
