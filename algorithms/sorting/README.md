@@ -79,7 +79,9 @@ const selectionSort = arr => {
 ```
 
 ## Insertion Sort
-Insertion Sort
+Insertion sort involves iterating through the array and inserting the element depending on the already sorted array at the beginning. The current element is compared to each element in the sorted array and inserted between the elements that are greater than and less than itself.
+
+While insertion sort is inefficient, there are actual use cases for this algorithm where the efficiency can go as low as O(n). The only cases where this is possible is when the array is very small or if it is close to already being sorted.
 
 ![](./images/insertion_sort.gif)
 
@@ -88,13 +90,15 @@ Insertion Sort
 
 ```javascript
 const insertionSort = arr => {
-  // iterate through the array excluding the first element - the first element will be used to compare where to insert the next element
+  // iterate through the array excluding the first element
+  // the first element will be used to compare where to insert the next element
   for (let i = 1; i < arr.length; i++) {
     // pointer for the current element
     const currEle = arr[i];
 
-    // iterate through the already sorted array in the front going backwards until we find an element less than the current element
-    for (var j = i - 1; j >= 0 && currEle < arr[j]; j--) {
+    // iterate through the already sorted array in the front going backwards
+    // until we find an element less than the current element or we reach the beginning of the array
+    for (let j = i - 1; j >= 0 && currEle < arr[j]; j--) {
       // shift each element up one index to leave space for the insertion
       arr[j + 1] = arr[j];
     }
@@ -108,7 +112,9 @@ const insertionSort = arr => {
 ```
 
 ## Merge Sort
-The idea behind merge sort is to split the array recursively into two arrays, left and right, until each element is it's own separate array.
+Merge sort is one of the most efficient sorting algorithms. In the merge sort algorithm, the array is split in half recursively creating two arrays, left and right, until each element is it's own separate array. Once all the elements are completely split, we can start merging the left and right arrays by comparing the first element in each array and merging them in ascending order.
+
+While merge sort has a very efficient time complexity, it has a less efficient space complexity. This means that merge sort should only be used if memory is not an issue and you are sorting a large number of elements.
 
 ![](./images/merge_sort.gif)
 
@@ -153,7 +159,7 @@ const merge = (left, right) => {
 ```
 
 ## Quick Sort
-Quick Sort is 
+Quick Sort is another very efficient sorting algorithm and is the most widely used algorithm in many languages. It involves selecting a pivot element and creating two arrays depending on each element's value compared to the pivot. Every element that is less than the pivot is placed in the left array and the rest are placed in the right. We then recursively repeat the same process until each stack contains no more elements in either the left or the right. This ensures that the pivot element in each stack call is constantly moving towards it's correct position.
 
 ![](./images/quick_sort.gif)
 
