@@ -1,7 +1,25 @@
 # Sorting Algorithms
-As software engineers, we most likely will never be writing our own sorting algorithms as most languages come with a sorting function. However, we need to know the difference between each sorting algorithm and when it is best to use them. 
+As software engineers, we most likely will never be writing our own sorting algorithms as most languages come with a sorting function. However, we need to know the difference between each sorting algorithm and when it is best to use them.
 
-Take a look at this [link](https://www.bigocheatsheet.com/) for more information on each sorting algorithm and their efficiencies.
+Take a look at this [link](https://www.bigocheatsheet.com/) for more information on each sorting algorithm and their efficiencies. 
+
+Here is another [link](https://www.toptal.com/developers/sorting-algorithms) that visualizes each sorting algorithm.
+
+## Sorting Algorithm in JavaScript
+Each language will have it's own sort method, but some languages' sorting algorithms differ from others. For instance, JavaScript's sorting algorithm does not sort in the conventional way. When we are sorting integers in JavaScript, JavaScript converts each number into a string and sorts it based on the character codes from "a" to "z". JavaScript's sort method requires a callback in order for it to sort integers
+
+```javascript
+// WITHOUT CALLBACK
+const arr = [3, 1, 12, 9, 6, 72, 101];
+
+console.log(arr.sort());  // [1, 101, 12, 3, 6, 72, 9]
+
+
+// WITH CALLBACK
+const arr = [3, 1, 12, 9, 6, 72, 101];
+
+console.log(arr.sort((a, b) => (a - b)));  // [1, 3, 6, 9, 12, 72, 101]
+```
 
 ## Bubble Sort
 The idea behind bubble sort is that the larger elements will continuously bubble up to the end of the array until there are no more elements to bubble up anymore. This will involve swapping the larger element until the largest element reaches the end of the array.
