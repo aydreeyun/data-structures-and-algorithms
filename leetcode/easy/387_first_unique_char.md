@@ -38,15 +38,19 @@ __Note__: You may assume the string contains only lowercase English letters.
 
 ```javascript
 const firstUniqChar = function(s) {
+  // initialize counter hash
   const hash = {};
-    
-  s.split("").forEach(char => {
-      if (!hash[char]) hash[char] = 0;
-      hash[char] += 1;
-  });
+  
+  // iterate through the string and increment the count of each character in the hash
+  for (let i = 0; i < s.length; i++) {
+    if (!hash[char]) hash[char] = 0;
+    hash[char]++;
+  }
 
+  // grab keys and find the index of the first instance where count is 1
   const unique = Object.keys(hash)[Object.values(hash).indexOf(1)];
   
+  // returns an index if it exists or returns -1 if not found
   return s.split("").indexOf(unique);
 };
 ```
